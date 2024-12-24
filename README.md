@@ -30,17 +30,58 @@ However, the remaining flip-flops should be made ready to toggle only when all l
 
 /* write all the steps invloved */
 
+ 1.Open the quartus prime software
+ 
+ 2.Mention th code in new file and compile, select tools- Netlist viewers-RTL viewver.
+ 
+ 3.Open new file and select Universal program VWF for waveform.
+
 **PROGRAM**
 
 /* Program for flipflops and verify its truth table in quartus using Verilog programming. 
 
-Developed by: RegisterNumber:
+Developed by:Harsheni.S
+
+RegisterNumber:24001722
 */
+
+module ex11(out,clk,rst);
+
+input clk,rst;
+
+output reg [3:0]out;
+
+always @ (posedge clk)
+
+begin
+
+   if(rst)
+   
+     out<=0;
+     
+   else 
+   
+     out <= out+1;
+     
+end
+
+endmodule
 
 **RTL LOGIC UP COUNTER**
 
-**TIMING DIAGRAM FOR IP COUNTER**
+![image](https://github.com/user-attachments/assets/656640e6-3868-41f4-a593-42363aa72b96)
+
+
+**TIMING DIAGRAM FOR UP COUNTER**
+
+![image](https://github.com/user-attachments/assets/903c9ce9-a5f4-4004-b744-95bb39861b58)
+
 
 **TRUTH TABLE**
 
-**RESULTS**
+![image](https://github.com/user-attachments/assets/5b8e572b-d37a-433d-868c-b65df7792a40)
+
+
+**RESULT**
+
+The implemention of 4 bit synchronous up counter and validation of functionality is done.
